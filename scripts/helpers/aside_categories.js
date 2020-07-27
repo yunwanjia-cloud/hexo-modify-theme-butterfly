@@ -35,7 +35,7 @@ hexo.extend.helper.register('aside_categories', function (categories, options) {
 
   const hierarchicalList = (t, level, parent, topparent = true) => {
     let result = ''
-    const isTopParent = topparent
+    // const isTopParent = topparent
     if (t > 0) {
       prepareQuery(parent).forEach((cat, i) => {
         if (t > 0) {
@@ -47,8 +47,8 @@ hexo.extend.helper.register('aside_categories', function (categories, options) {
             t = childList[1]
           }
 
-          const parentClass = isExpand && isTopParent && child ? 'parent' : ''
-
+          // const parentClass = isExpand && isTopParent && child ? 'parent' : ''
+          const parentClass = isExpand && child ? 'parent' : ''
           result += `<li class="card-category-list-item ${parentClass}">`
 
           result += `<a class="card-category-list-link" href="${this.url_for(cat.path)}">`
@@ -59,7 +59,8 @@ hexo.extend.helper.register('aside_categories', function (categories, options) {
             result += `<span class="card-category-list-count">${cat.length}</span>`
           }
 
-          if (isExpand && isTopParent && child) {
+          // if (isExpand && isTopParent && child) {
+          if (isExpand && child) {
             result += `<i class="fas fa-caret-left ${expandClass}"></i>`
           }
 

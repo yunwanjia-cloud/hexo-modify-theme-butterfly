@@ -711,7 +711,7 @@ const toggleCardCategory = function () {
     e.preventDefault()
     const $this = $(this)
     $this.toggleClass('expand')
-    $this.parents('.parent').next().toggle()
+    $this.parents('.parent').next().toggle(500)
   })
 }
 

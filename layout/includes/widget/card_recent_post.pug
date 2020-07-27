@@ -11,7 +11,7 @@
           - let link = article.link || article.path
           - let title = article.title || _p('no_title')
           - let no_cover = article.cover === false || !theme.cover.aside_enable ? 'no-aside-cover' : ''
-          - let post_cover = article.cover
+          - let post_cover = theme.jsd_post.cover ? (theme.jsd_post.jsd_url + article.cover) : article.cover
           if post_cover && theme.cover.aside_enable
             a.aside-post-cover(href=url_for(link) title=title)
               if theme.lazyload.enable

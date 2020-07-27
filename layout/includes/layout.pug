@@ -17,6 +17,9 @@ html(lang=config.language data-theme=theme.display_mode)
       if theme.background
         - var is_photo = theme.background.startsWith('url') ? 'photo':'color'
         #web_bg(data-type=is_photo)
+      else if (theme.random_background.page || theme.random_background.post)
+        - var is_photo = 'photo'
+        #web_bg(data-type=is_photo)
 
       include ./sidebar.pug
       include ./header/index.pug
@@ -37,8 +40,14 @@ html(lang=config.language data-theme=theme.display_mode)
       
       - var footer_bg = theme.footer_bg == false ? '' : bg_img
       - var is_bg = theme.footer_bg == false ? 'color' : 'photo'
+      if (theme.footer_transparent.post && is_post())
+        - var footer_bg = 'background-color: transparent;' 
+      if (theme.footer_transparent.page && !is_post())
+        - var footer_bg = 'background-color: transparent;' 
       footer#footer(style=footer_bg data-type=is_bg)
         !=partial('includes/footer', {}, {cache:theme.fragment_cache})
+      if (((theme.random_background.post && is_post()) || (theme.random_background.page && !is_post())) && !theme.background)
+        script() var bg_index = Math.floor(Math.random() * #{theme.random_background.num});var res = 'background-image: url("https://cdn.jsdelivr.net/gh/#{theme.random_background.username}/#{theme.random_background.repo}#{theme.random_background.path}' + bg_index + '#{theme.random_background.suffix}");';document.getElementById('web_bg').style = res
 
     include ./rightside.pug
     !=partial('includes/search/index', {}, {cache:theme.fragment_cache})

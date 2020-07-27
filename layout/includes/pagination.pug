@@ -15,7 +15,7 @@ else
     if(page.prev)
       - var hasPageNext = page.next ? 'pull-left' : 'pull-full'
       .prev-post(class=hasPageNext)
-        - var pagination_cover = page.prev.cover === false ? page.prev.randomcover : page.prev.cover
+        - var pagination_cover = page.prev.cover === false ? page.prev.randomcover : (theme.jsd_post.cover ? (theme.jsd_post.jsd_url + page.prev.cover) : page.prev.cover)
         a(href=url_for(page.prev.path))
           if theme.lazyload.enable
             img.prev-cover(data-lazy-src=url_for(pagination_cover) onerror=`onerror=null;src='${url_for(theme.error_img.post_page)}'` )
@@ -27,7 +27,7 @@ else
           
     if(page.next)
       - var hasPagePrev = page.prev ? 'pull-right' : 'pull-full'
-      - var pagination_cover = page.next.cover == false ? page.next.randomcover : page.next.cover
+      - var pagination_cover = page.next.cover == false ? page.next.randomcover : (theme.jsd_post.cover ? (theme.jsd_post.jsd_url + page.next.cover) : page.next.cover)
       .next-post(class=hasPagePrev)
         a(href=url_for(page.next.path))
           if theme.lazyload.enable

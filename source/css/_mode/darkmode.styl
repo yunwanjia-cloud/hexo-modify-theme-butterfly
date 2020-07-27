@@ -55,7 +55,8 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
         display: block
         width: 100%
         height: 100%
-        background-color: alpha($dark-black, .7)
+        if !hexo-config('banner_transparent')
+          background-color: alpha($dark-black, .7)
         content: ''
 
       & > #nav
