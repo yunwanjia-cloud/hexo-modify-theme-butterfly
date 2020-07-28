@@ -12,9 +12,8 @@ content_opacity: # 设置透明度
 
 banner_transparent: true # page页banner设置透明
 
-footer_transparent: # 页脚是否透明 (与页脚动态颜色冲突, 请不要同时设置)
-  post: false # post 文章开启
-  page: true # page 页开启
+# 页脚透明度
+footer_transparent: 0.3 # 填 0-1, 0为完全透明, 1为完全不透明
 
 random_background:
   post: false # post 文章开启
