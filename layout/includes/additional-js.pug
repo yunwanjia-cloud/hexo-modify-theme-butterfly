@@ -88,7 +88,7 @@ div
   //- jsdelivr
   if theme.jsd_post.img
     script(data-pjax) jsd_url = "#{theme.jsd_post.jsd_url}"
-    script(data-pjax src=url_for(theme.CDN.jsd_img))
+    script(src=url_for(theme.CDN.jsd_img) data-pjax)
 
   if theme.pjax
     !=partial('includes/third-party/pjax', {}, {cache:theme.fragment_cache})
