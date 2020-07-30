@@ -58,7 +58,7 @@ hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
       const cover =
         relatedPosts[i].cover === false
           ? relatedPosts[i].randomcover
-          : (config.jsd_post.cover ? (config.jsd_post.jsd_url + relatedPosts[i].cover) : relatedPosts[i].cover)
+          : (config.cdn_post.cover ? (config.cdn_post.cdn_url + relatedPosts[i].cover) : relatedPosts[i].cover)
       result +=
         '<div class="relatedPosts_item"><a href="' +
         hexoConfig.root +

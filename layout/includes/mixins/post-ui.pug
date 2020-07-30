@@ -4,7 +4,7 @@ mixin postUI(posts)
       - let link = article.link || article.path
       - let title = article.title || _p('no_title')
       - let leftOrRight = index%2 == 0 ? 'left_radius' : 'right_radius'
-      - let post_cover = theme.jsd_post.cover ? (theme.jsd_post.jsd_url + article.cover) : article.cover
+      - let post_cover = theme.cdn_post.cover ? (theme.cdn_post.cdn_url + article.cover) : article.cover
       - let no_cover = article.cover === false || !theme.cover.index_enable ? 'no-cover' : ''
       if post_cover && theme.cover.index_enable
         .post_cover(class=leftOrRight)

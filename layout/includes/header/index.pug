@@ -1,7 +1,7 @@
 if is_home()
   - var top_img = theme.index_img || theme.default_top_img
 else if is_post()
-  - var top_img = page.top_img || (theme.jsd_post.cover ? (theme.jsd_post.jsd_url + page.cover) : page.cover) || page.randomcover || theme.default_top_img
+  - var top_img = page.top_img || (theme.cdn_post.cover ? (theme.cdn_post.cdn_url + page.cover) : page.cover) || page.randomcover || theme.default_top_img
 else if is_archive()
   - var top_img = theme.archive_img || theme.default_top_img
 else if is_tag()
