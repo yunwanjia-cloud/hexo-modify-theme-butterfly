@@ -1,54 +1,39 @@
-# hexo-theme-butterfly
+# hexo-modify-theme-butterfly
 
-<a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Version" src="https://img.shields.io/badge/release-3.0.0-blue"/></a>
-<a href="https://jerryc.me"><img alt="Author" src="https://img.shields.io/badge/author-JerryC-blur"/></a>
-<a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-4.0+-0e83c"/></a>
-<a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-8.0+-blur"/></a>
+Demo:  [云玩家](https://yunist.cn)
 
-Demo:  👍 [Butterfly](https://demo.jerryc.me/)  ||   🤞 [JerryC](https://jerryc.me/)
+一款基于 [hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-butterfly) 魔改的主題
 
-Based on [hexo-theme-melody](https://github.com/Molunerfinn/hexo-theme-melody) theme.
+## 新特性
 
-## Installation
+ 所有魔改均可关闭, 并且与原主题兼容. 如果你之前的主题也是 butterfly 然后想要启用魔改主题, 可以直接下载并且添加魔改配置进入原主题 `config`, 即可平滑启用.
 
-Stable branch [recommend]:
+* 分类折叠
+* 文章图片 CDN 加速
+* 设置透明度
+* 页脚动态颜色
+* 侧边栏分类能够直达文章
+* 首次进站弹窗
+* ....
+
+## 安装
+
+在你的主题目录下安装
 
 ```
-git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+git clone https://github.com/cnyist/hexo-modify-theme-butterfly.git
 ```
 
-Dev branch:
+## 启用主題
+
+把下载的主题文件夹名字改为 `Butterfly` , 同时修改hexo配置文件`_config.yml`，把主題改为`Butterfly`
 
 ```
-git clone -b dev https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+theme: Butterfly
 ```
 
-## Configuration
+> 如果你没有 pug 以及stylus的渲染器, 请下载安装: npm install hexo-renderer-pug hexo-renderer-stylus --save or yarn add hexo-renderer-pug hexo-renderer-stylus
 
- Set theme in the hexo work folder's root config file `_config.yml`: 
+## 文档
 
-> theme: butterfly
-
- If you don't have pug & stylus renderer, try this: 
-
-> npm install hexo-renderer-pug hexo-renderer-stylus
-
-## Documentation
-
-Find in [Butterfly Docs](https://demo.jerryc.me/posts/21cfbf15/). it supports `zh-TW` and `zh-CN`
-
-You can also join the Chat Group.
-
-[💬 Join QQ Group [recommend]](https://jq.qq.com/?_wv=1027&k=5KI3Jqb)
-
-[💬 Join Telegram Group](https://t.me/hexo_butterfly)
-
-
-
-## Screenshots
-
-![image](https://user-images.githubusercontent.com/16351105/58887365-1272f780-8718-11e9-9329-3292c6ba20d4.png)
-
-![](https://user-images.githubusercontent.com/16351105/58887457-3cc4b500-8718-11e9-9417-2bdea603c92e.png)
-
-![](https://user-images.githubusercontent.com/16351105/69338594-7d03f980-0c9e-11ea-8b64-7f165e6508e2.png)
+可查看 [hexo-theme-butterfly docs](https://docs.jerryc.me) (原 butterfly 文档) 以及 [hexo-modify-theme-butterfly](https://yunist.cn/hexo/hexo_modify_theme_butterfly/) (魔改 butterfly 文档).
