@@ -274,7 +274,7 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments
   use:
-  # - Valine
+    - Valine
   # - Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -298,6 +298,11 @@ disqusjs:
   nocomment: # display when a blog post or an article has no comment attached
   admin:
   adminLabel:
+
+# twikoo
+# https://twikoo.js.org
+twikoo:
+  envId: # 腾讯云云开发环境 ID
 
 # livere (來必力)
 # https://www.livere.com/

@@ -14,3 +14,5 @@ each name in theme.comments.use
       !=partial('includes/comments/utterances', {}, {cache:theme.fragment_cache})
     when 'Facebook Comments'
       !=partial('includes/comments/facebook_comments', {}, {cache:theme.fragment_cache})
+    when 'Twikoo'
+      include ./twikoo.pug
