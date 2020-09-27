@@ -1,7 +1,7 @@
 # 独立魔改
 # --------------------------------------
 
-cdn_post: # 自动将图片替换为 cdn 加速过的, 仅对图片有部署在 github 上的博客有效 (双部署也算)
+cdn_post: # 自动将图片替换为 cdn 加速过的, 仅对图片有部署在 Github 上的博客有效
   img: true # 文章内图片加速
   cover: true # 文章 cover 加速(启用后只能用相对路径, 具体请看魔改 butterfly 文档)
   cdn_url: # "https://cdn.jsdelivr.net/gh/cnyist/blog/" 将 cnyist 换成 github 的用户名, blog 换成博客的 github 仓库名
