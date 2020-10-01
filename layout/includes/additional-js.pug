@@ -76,6 +76,11 @@ div
     if theme.busuanzi.site_uv || theme.busuanzi.site_pv || theme.busuanzi.page_pv
       script(async src=url_for(theme.CDN.busuanzi))
 
+    //- jsdelivr
+    if theme.cdn_post.img
+      script() cdn_url = "#{theme.cdn_post.cdn_url}"
+      script(src=url_for(theme.CDN.cdn_img))
+
   if theme.aplayerInject && !config.aplayer.asset_inject
     if theme.pjax
       include ./head/aplayer.pug
@@ -84,11 +89,6 @@ div
 
   !=fragment_cache('injectBottom', function(){return injectHtml(theme.inject.bottom)})
   !=partial('includes/chat/index', {}, {cache:theme.fragment_cache})
-
-  //- jsdelivr
-  if theme.cdn_post.img
-    script() cdn_url = "#{theme.cdn_post.cdn_url}"
-    script(src=url_for(theme.CDN.cdn_img) data-pjax)
 
   if theme.pjax
     !=partial('includes/third-party/pjax', {}, {cache:theme.fragment_cache})

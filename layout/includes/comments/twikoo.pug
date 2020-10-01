@@ -1,2 +1,6 @@
-script(src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js")
-script() twikoo.init({ envId: '#{theme.twikoo.envId}' })
+script.
+  function initTwikoo () {
+    twikoo.init({ envId: '#{theme.twikoo.envId}' })
+  }
+  $.getScript('!{url_for(theme.CDN.twikoo)}', initTwikoo)
+  
