@@ -4,7 +4,7 @@ doctype html
 html(lang=config.language data-theme=theme.display_mode)
   head
     include ./head.pug
-    iframe(name="player", id="player", src="/player/", frameborder="0", onload="this.width=player.jp_container_N.scrollWidth;$('.songlist__item').each(function(){generate($(this).attr('id'))});", style="z-index:100; position:fixed; left:0px; bottom:0px")
+    iframe(name="player", id="player", src="/player/", frameborder="0", onload="this.width=player.jp_container_N.scrollWidth;$('.song_item').each(function(){generate($(this).attr('id'))});", style="z-index:100; position:fixed; left:0px; bottom:0px")
   body
     if theme.preloader
       !=partial('includes/loading/loading', {}, {cache:theme.fragment_cache})

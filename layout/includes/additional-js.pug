@@ -82,7 +82,7 @@ div
     if theme.busuanzi.site_uv || theme.busuanzi.site_pv || theme.busuanzi.page_pv
       script(async src=url_for(theme.CDN.busuanzi))
 
-    script() $('.songlist__item').each(function(){generate($(this).attr('id'))})
+    script() generate_all()
     
     //- cdn post
     if theme.cdn_post.img
