@@ -59,6 +59,12 @@ div
 
   if theme.preloader
     !=partial('includes/loading/loading-js', {}, {cache:theme.fragment_cache})
+    
+  script(src='/player/js/generate.js')
+
+  //- cdn post
+  if theme.cdn_post.img
+    script(async src=url_for(theme.CDN.cdn_img)) cdn_url = "#{theme.cdn_post.cdn_url}"
 
   .js-pjax
     if is_home() && theme.subtitle.enable
@@ -76,10 +82,11 @@ div
     if theme.busuanzi.site_uv || theme.busuanzi.site_pv || theme.busuanzi.page_pv
       script(async src=url_for(theme.CDN.busuanzi))
 
-    //- jsdelivr
+    script() $('.songlist__item').each(function(){generate($(this).attr('id'))})
+    
+    //- cdn post
     if theme.cdn_post.img
-      script() cdn_url = "#{theme.cdn_post.cdn_url}"
-      script(src=url_for(theme.CDN.cdn_img))
+      script() cdn_post_init()
 
   if theme.aplayerInject && !config.aplayer.asset_inject
     if theme.pjax
